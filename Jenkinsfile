@@ -9,9 +9,9 @@ pipeline {
                 sh 'npm install'
             }
         }
-	stage('Test') { 
+        stage('Test') {
             steps {
-                sh './jenkins/scripts/test.sh' 
+                sh './jenkins/scripts/test.sh'
             }
         }
         stage('Deliver') {
@@ -21,6 +21,6 @@ pipeline {
                 sh './jenkins/scripts/kill.sh'
             }
         }
-	        // Add more stages as needed
+        // Add more stages as needed
     }
 }
